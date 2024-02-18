@@ -29,8 +29,9 @@ public class Baejoon_1966 {
 				boolean isMax = true;
 //				가져온 큐보다 큰 값이 있는지 확인(있으면 뒤로보내기)
 				for(int k = 0; k < queue.size(); k++) {
-					if(front[1] < queue.get(k)[1]) {
-						queue.offer(front);
+					if(front[1] < queue.get(k)[1]) { // 뒤에 값이랑 비교
+						queue.offer(front); 
+						// 첫번째 값을 제일 뒤로 보내기, queue이기 때문에 offer를 사용하면 제일 뒤로 간다
 						isMax = false;
 						break;
 					}
